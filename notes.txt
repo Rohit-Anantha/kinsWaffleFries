@@ -1,0 +1,18 @@
+String urlStart = "http://hf-food.austin.utexas.edu/foodpro/longmenu.aspx";
+    String urlName = "?sName=I&";
+    String locationNum = "locationNum=";
+    String locationName = "&locationName=I&naFlag=1&WeeksMenus=This+Week%27s+Menus&dt";
+    String dateURL = "date=";
+    String AND_SYMBOL = "&";
+    String PERCENT_TWO_F = "%2f";
+    String mealString = "mealName=";
+    String mealName;
+
+    return urlStart + urlName + locationNum + getLocationNum() + locationName + dateURL
+                + createDateString() + mealString + mealName;
+
+return MONTH + PERCENT_TWO_F + DAY_OF_MONTH + PERCENT_TWO_F + YEAR + AND_SYMBOL;
+
+
+
+http://hf-food.austin.utexas.edu/foodpro/longmenu.aspx?sName=I&locationNum=03&locationName=I&naFlag=1&WeeksMenus=This+Week%27s+Menus&dtdate=
