@@ -3,8 +3,6 @@
  * Version 1.0
  * Purpose: Are there Waffle Fries at Kinsolving Dining today?
  */
-const { Console } = require('console');
-const cool = require('cool-ascii-faces');
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
@@ -14,7 +12,12 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/waffle', { test: waffles() }))
+  .get('/search', (req, res) => res.send(search()))
   .listen(PORT, () => console.log(`Listening on ${PORT}`))
+
+search = () => {
+  return 'not implemented yet';
+}
 
 waffles = () => {
   var request = require('sync-request');
